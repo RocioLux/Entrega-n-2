@@ -1,0 +1,14 @@
+// _mixins.scss
+@mixin background-cover($image) {
+    background-image: $image;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  @mixin button-styles {
+    width: 15rem;
+    height: 2.5rem;
+    background-color: $primary-color;
+    color: rgb(252, 252, 252);
+  }
+  

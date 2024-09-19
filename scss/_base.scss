@@ -1,20 +1,20 @@
+// _base.scss
+@import 'variables';
+@import 'mixins';
+
 * {
-  font-family: "Timmana", sans-serif;
-  font-weight: 500;
+  font-family: $font-family;
+  font-weight: $font-weight;
   font-style: normal;
 }
 
 header {
-  background-image: url(../images/inicioavion.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include background-cover($header-image);
   height: 80vh;
 }
 
 body {
-  background-image: url(../images/background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include background-cover($body-background);
 }
 
 h2 {
@@ -35,21 +35,18 @@ h3 {
 
 .caja_reserva {
   display: grid;
-  grid-template-columns: 2, 1fr;
+  grid-template-columns:2, 1fr;
   align-content: center;
   justify-items: center;
   margin: 0.5rem;
   text-align: center;
-  background-color: rgba(210, 210, 210, 0.521);
+  background-color: $background-color;
   border-radius: 10px;
 }
 
 .Boton-reserva,
 .Boton_destino {
-  width: 15rem;
-  height: 2.5rem;
-  background-color: rgba(76, 47, 194, 0.724);
-  color: rgb(252, 252, 252);
+  @include button-styles;
 }
 
 @media (min-width: 350px) {
@@ -61,9 +58,7 @@ h3 {
     justify-items: center;
     margin: 0.5rem;
     text-align: center;
-    background-color: rgba(210, 210, 210, 0.521);
+    background-color: $background-color;
     border-radius: 10px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
